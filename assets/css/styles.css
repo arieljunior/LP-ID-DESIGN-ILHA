@@ -28,7 +28,7 @@ body {
 
 .header {
   background-color: var(--black-main);
-  height: 700px;
+  height: 100vh;
   text-align: center;
   display: grid;
   justify-content: center;
@@ -48,7 +48,6 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: -10;
   height: 250px;
 }
 
@@ -59,7 +58,7 @@ body {
 
 .prhase {
   color: var(--white-main);
-  font-size: 20px;
+  font-size: 1.5rem;
   white-space: pre;
   font-style: italic;
   font-weight: normal;
@@ -81,7 +80,7 @@ body {
 }
 
 .menu>ul>li {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .menu>ul>li:last-child::after {
@@ -97,12 +96,12 @@ body {
   text-decoration: underline;
 }
 
-.section-main{
+.section-main {
   padding: 50px 0px;
   text-align: center;
 }
 
-.img-carousel{
+.img-carousel {
   height: 500px;
   filter: brightness(0.6) opacity(1);
   width: 100%;
@@ -110,4 +109,48 @@ body {
 
 .title-container {
   margin-bottom: 20px;
+}
+.carousel-info{
+  display: block !important;
+}
+
+#container-carrousels {
+  display: grid;
+  gap: 10px;
+}
+@media (max-width: 425px) {
+  .menu>ul>li{
+    font-size: 1rem;
+  }
+  .img-carousel{
+    height: 300px;
+  }
+  .header>.img-grid-top {
+    height: 80px;
+  }
+
+  .header>.img-grid-bottom {
+    height: 160px;
+
+  }
+
+  .logo>img {
+    width: 220px;
+  }
+
+  .menu>ul {
+    flex-direction: column;
+  }
+
+  .menu>ul>li::after {
+    content: none;
+    margin: 0;
+  }
+
+  .prhase {
+    font-size: 0.75rem;
+  }
+  .title-container>h1{
+    font-size: 1.3rem;
+  }
 }

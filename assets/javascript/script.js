@@ -1,5 +1,13 @@
 const carouselsContainer = document.querySelector("#container-carrousels")
+const btnsWhatsapp = document.querySelectorAll(".whatsapp-call");
 
+const ENCODED_MESSAGE_BUTTON_WHATSAPP = encodeURIComponent('Olá, vim através do site e gostaria de fazer um orçamento')
+
+btnsWhatsapp.forEach(btnWpp => {
+  btnWpp.addEventListener('click', () => {
+    window.open(`https://api.whatsapp.com/send/?phone=5521968193994&text=${ENCODED_MESSAGE_BUTTON_WHATSAPP}&type=phone_number&app_absent=0`, '_blank')
+  })
+})
 function downloadPDF() {
   console.log("BAIXANDO PDF...");
 

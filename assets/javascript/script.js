@@ -1,16 +1,22 @@
 const carouselsContainer = document.querySelector("#container-carrousels")
 const btnsWhatsapp = document.querySelectorAll(".whatsapp-call");
-
 const ENCODED_MESSAGE_BUTTON_WHATSAPP = encodeURIComponent('Olá, vim através do site e gostaria de fazer um orçamento')
+
+var map = L.map('map').setView([-22.804933, -43.207075], 13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([-22.804933, -43.207075]).addTo(map);
+marker.bindPopup("ID Design Ilha").openPopup();
 
 btnsWhatsapp.forEach(btnWpp => {
   btnWpp.addEventListener('click', () => {
     window.open(`https://api.whatsapp.com/send/?phone=5521968193994&text=${ENCODED_MESSAGE_BUTTON_WHATSAPP}&type=phone_number&app_absent=0`, '_blank')
   })
 })
-function downloadPDF() {
-  console.log("BAIXANDO PDF...");
 
+function downloadPDF() {
   const path = "/files/imobal.pdf";
   const link = document.createElement("a");
   link.href = window.origin + path;
@@ -18,8 +24,6 @@ function downloadPDF() {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-
-  console.log("PDF BAIXADO!");
 }
 
 const produtos = [{

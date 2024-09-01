@@ -80,7 +80,7 @@ function populateProducts(productsCarousel, carouselListItensElement, caroulseIn
 
     carouselCaption.innerHTML = `
        <h5>${product.title}</h5>
-       <button type="button" onclick="downloadPDF('${product.srcPdfDownload}');">Baixar catalogo</button>
+       <button type="button" class="btn btn-outline-light" onclick="downloadPDF('${product.srcPdfDownload}');">Baixar catalogo</button>
     `
 
     carouselItem.appendChild(imageCarousel)

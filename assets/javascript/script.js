@@ -11,7 +11,7 @@ var marker = L.marker([-22.804461, -43.206986]).addTo(map);
 // marker.bindPopup("ID Design Ilha").openPopup();
 marker.bindPopup(`ID Design Ilha - <a
                   href="https://www.google.com/maps/place/ID+Design+M%C3%B3veis+e+Projetos+de+Interiores+%7C+Moveis+Planejados+%7C+Cozinha+Planejada+%7C+Decora%C3%A7%C3%A3o+%7C+Design+%7C+Ilha+do+Governador/@-22.8041196,-43.209782,17z/data=!4m6!3m5!1s0x9979d2c22338fd:0xc1db67f9e4f4c892!8m2!3d-22.8041196!4d-43.2072071!16s%2Fg%2F11w25_7rkp?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
-                  target="_blank">Clique aqui</a> para abrir no Google Maps`).openPopup();
+                  target="_blank">Clique aqui</a>`).openPopup();
 
 function onMapClick(e) {
   console.log("You clicked the map at " + e.latlng.toString());

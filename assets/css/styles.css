@@ -232,6 +232,22 @@ button {
 .footer>ul>li:last-child::after {
   content: none;
 }
+.icon {
+  width: 30px;
+  margin-right: 10px;
+}
+.whatsapp-call > .icon {
+  filter: brightness(0) invert(1);
+  margin-bottom: 4px;
+}
+/* .btn-download-catalog > .icon {
+  filter: brightness(0) invert(1);
+  margin-bottom: 4px;
+}
+.btn-download-catalog:active > .icon {
+  filter: brightness(0);
+} */
+
 
 @media (max-width: 425px) {
   .footer>ul {

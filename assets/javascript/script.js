@@ -2,22 +2,21 @@ const carouselsContainer = document.querySelector("#container-carrousels")
 const btnsWhatsapp = document.querySelectorAll(".whatsapp-call");
 const ENCODED_MESSAGE_BUTTON_WHATSAPP = encodeURIComponent('Olá, vim através do site e gostaria de fazer um orçamento')
 
-var map = L.map('map').setView([-22.804461, -43.206986], 40);
+var map = L.map('map').setView([-22.804461, -43.206986], 17);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
+  maxZoom: 50,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 var marker = L.marker([-22.804461, -43.206986]).addTo(map);
-// marker.bindPopup("ID Design Ilha").openPopup();
 marker.bindPopup(`ID Design Ilha - <a
                   href="https://www.google.com/maps/place/ID+Design+M%C3%B3veis+e+Projetos+de+Interiores+%7C+Moveis+Planejados+%7C+Cozinha+Planejada+%7C+Decora%C3%A7%C3%A3o+%7C+Design+%7C+Ilha+do+Governador/@-22.8041196,-43.209782,17z/data=!4m6!3m5!1s0x9979d2c22338fd:0xc1db67f9e4f4c892!8m2!3d-22.8041196!4d-43.2072071!16s%2Fg%2F11w25_7rkp?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
-                  target="_blank">Clique aqui</a>`).openPopup();
+                  target="_blank">Abrir no Google Maps</a>`).openPopup();
 
-function onMapClick(e) {
-  console.log("You clicked the map at " + e.latlng.toString());
-}
+// function onMapClick(e) {
+//   console.log("You clicked the map at " + e.latlng.toString());
+// }
 
-map.on('click', onMapClick);
+// map.on('click', onMapClick);
 
 btnsWhatsapp.forEach(btnWpp => {
   btnWpp.addEventListener('click', () => {
@@ -35,28 +34,126 @@ function downloadPDF() {
   document.body.removeChild(link);
 }
 
-const produtos = [{
-  srcImage: './assets/images/room.jpg',
-  alt: 'Imagem de um quarto',
-  title: 'Quarto Preto, Ébano e Cinza Médio',
-  srcPdfDownload: '/files/imobal.pdf'
+const carrousels = [{
+  images: [{
+    srcImage: './assets/images/Asterope/ast-100.jpg',
+    alt: 'Mesa',
+    title: 'Mesa',
+  }, {
+    srcImage: './assets/images/Asterope/ast2-100.jpg',
+    alt: 'Mesa',
+    title: 'Mesa',
+  }, {
+    srcImage: './assets/images/Asterope/ast3-100.jpg',
+    alt: 'Mesa',
+    title: 'Mesa',
+  }, {
+    srcImage: './assets/images/Asterope/ast5-100.jpg',
+    alt: 'Mesa',
+    title: 'Mesa',
+  }, {
+    srcImage: './assets/images/Asterope/ast6-100.jpg',
+    alt: 'Mesa',
+    title: 'Mesa',
+  }, {
+    srcImage: './assets/images/Asterope/ast152-100.jpg',
+    alt: 'Mesa',
+    title: 'Mesa',
+  }],
+  srcPdfDownload: '/files/asterope.pdf'
 }, {
-  srcImage: './assets/images/chair.jpg',
-  alt: 'Imagem de um quarto',
-  title: 'Quarto Preto, Ébano e Cinza Médio',
+  images: [{
+    srcImage: './assets/images/Imobal/img1.jpg',
+    alt: 'Área de Serviço Beton, Grafite e Noce',
+    title: 'Área de Serviço Beton, Grafite e Noce',
+  }, {
+    srcImage: './assets/images/Imobal/img2.jpg',
+    alt: 'Banheiro Laca Rosa e Vero',
+    title: 'Banheiro Laca Rosa e Vero',
+  }, {
+    srcImage: './assets/images/Imobal/img3.jpg',
+    alt: 'Banheiro Nordic e Branco TX ',
+    title: 'Banheiro Nordic e Branco TX ',
+  }, {
+    srcImage: './assets/images/Imobal/img4.jpg',
+    alt: 'Banheiro Provencal Linho e Vero',
+    title: 'Banheiro Provencal Linho e Vero',
+  }, {
+    srcImage: './assets/images/Imobal/img5.jpg',
+    alt: 'Closet Areia',
+    title: 'Closet Areia',
+  }, {
+    srcImage: './assets/images/Imobal/img6.jpg',
+    alt: 'Coworking Beton e Cinza Brilho',
+    title: 'Coworking Beton e Cinza Brilho',
+  }, {
+    srcImage: './assets/images/Imobal/img7.jpg',
+    alt: 'Cozinha Cava Invertido Noce e Areia',
+    title: 'Cozinha Cava Invertido Noce e Areia',
+  }, {
+    srcImage: './assets/images/Imobal/img8.jpg',
+    alt: 'Cozinha Cava Invertido Noce',
+    title: 'Cozinha Cava Invertido Noce',
+  }, {
+    srcImage: './assets/images/Imobal/img9.jpg',
+    alt: 'Cozinha Cava Invertido Rose e Nogueira ',
+    title: 'Cozinha Cava Invertido Rose e Nogueira ',
+  }, {
+    srcImage: './assets/images/Imobal/img10.jpg',
+    alt: 'Cozinha Chumbo Friso e Musgo',
+    title: 'Cozinha Chumbo Friso e Musgo',
+  }, {
+    srcImage: './assets/images/Imobal/img11.jpg',
+    alt: 'Escritorio Nordic Ebano e Beton',
+    title: 'Escritorio Nordic Ebano e Beton',
+  }, {
+    srcImage: './assets/images/Imobal/img12.jpg',
+    alt: 'Sala Azul Grafite',
+    title: 'Sala Azul Grafite',
+  }, {
+    srcImage: './assets/images/Imobal/img13.jpg',
+    alt: 'Sala Rose Linho',
+    title: 'Sala Rose Linho',
+  }, {
+    srcImage: './assets/images/Imobal/img14.jpg',
+    alt: 'Lavandria Azul',
+    title: 'Lavandria Azul',
+  }],
   srcPdfDownload: '/files/imobal.pdf'
-}, {
-  srcImage: './assets/images/kitchen.jpg',
-  alt: 'Imagem de um quarto',
-  title: 'Quarto Preto, Ébano e Cinza Médio',
-  srcPdfDownload: '/files/imobal.pdf'
+},{
+  images: [{
+    srcImage: './assets/images/Tomasi/tomasi1-100.jpg',
+    alt: 'Estofado Star',
+    title: 'Estofado Star',
+  }, {
+    srcImage: './assets/images/Tomasi/tomasi4-100.jpg',
+    alt: 'Assento fixo e encosto com almofadas soltas',
+    title: 'Assento fixo e encosto com almofadas soltas',
+  }, {
+    srcImage: './assets/images/Tomasi/tomasi332-100.jpg',
+    alt: 'Assento retrátil, encosto reclinável com almofadas soltas',
+    title: 'Assento retrátil, encosto reclinável com almofadas soltas',
+  }],
+  srcPdfDownload: '/files/tomasi.pdf'
+},{
+  images: [{
+    srcImage: './assets/images/Rivatti/Prancheta 30-100.jpg',
+    alt: 'Sala',
+    title: 'Sala',
+  }, {
+    srcImage: './assets/images/Rivatti/Prancheta 31-100.jpg',
+    alt: 'Cozinha',
+    title: 'Cozinha',
+  }, {
+    srcImage: './assets/images/Rivatti/Prancheta 56-100.jpg',
+    alt: 'Mesa finlândia e cadeira Mia',
+    title: 'Mesa finlândia e cadeira Mia',
+  }],
+  srcPdfDownload: '/files/tomasi.pdf'
 }]
 
-const carrousels = [produtos, produtos, produtos]
-
-
-function populateProducts(productsCarousel, carouselListItensElement, caroulseIndicatorsElement, idCarousel) {
-  productsCarousel.forEach((product, index) => {
+function populateProducts(productsData, carouselListItensElement, caroulseIndicatorsElement, idCarousel) {
+  productsData.images.forEach((product, index) => {
     const carouselItem = document.createElement("div");
     carouselItem.classList.add("carousel-item")
 
@@ -80,7 +177,8 @@ function populateProducts(productsCarousel, carouselListItensElement, caroulseIn
 
     carouselCaption.innerHTML = `
        <h5>${product.title}</h5>
-       <button type="button" class="btn btn-outline-light" onclick="downloadPDF('${product.srcPdfDownload}');">Baixar catalogo</button>
+       <button type="button" class="btn-download-catalog btn btn-outline-light" onclick="downloadPDF('${productsData.srcPdfDownload}');">
+       Baixar catalogo</button>
     `
 
     carouselItem.appendChild(imageCarousel)

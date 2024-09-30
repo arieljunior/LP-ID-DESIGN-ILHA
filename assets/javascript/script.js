@@ -36,33 +36,6 @@ function downloadPDF() {
 
 const carrousels = [{
   images: [{
-    srcImage: './assets/images/Asterope/ast-100.jpg',
-    alt: 'Mesa',
-    title: 'Mesa',
-  }, {
-    srcImage: './assets/images/Asterope/ast2-100.jpg',
-    alt: 'Mesa',
-    title: 'Mesa',
-  }, {
-    srcImage: './assets/images/Asterope/ast3-100.jpg',
-    alt: 'Mesa',
-    title: 'Mesa',
-  }, {
-    srcImage: './assets/images/Asterope/ast5-100.jpg',
-    alt: 'Mesa',
-    title: 'Mesa',
-  }, {
-    srcImage: './assets/images/Asterope/ast6-100.jpg',
-    alt: 'Mesa',
-    title: 'Mesa',
-  }, {
-    srcImage: './assets/images/Asterope/ast152-100.jpg',
-    alt: 'Mesa',
-    title: 'Mesa',
-  }],
-  srcPdfDownload: '/files/asterope.pdf'
-}, {
-  images: [{
     srcImage: './assets/images/Imobal/img1.jpg',
     alt: 'Área de Serviço Beton, Grafite e Noce',
     title: 'Área de Serviço Beton, Grafite e Noce',
@@ -84,8 +57,8 @@ const carrousels = [{
     title: 'Closet Areia',
   }, {
     srcImage: './assets/images/Imobal/img6.jpg',
-    alt: 'Coworking Beton e Cinza Brilho',
-    title: 'Coworking Beton e Cinza Brilho',
+    alt: 'Móveis Planejados',
+    title: 'Móveis Planejados',
   }, {
     srcImage: './assets/images/Imobal/img7.jpg',
     alt: 'Cozinha Cava Invertido Noce e Areia',
@@ -122,6 +95,33 @@ const carrousels = [{
   srcPdfDownload: '/files/imobal.pdf'
 },{
   images: [{
+    srcImage: './assets/images/Asterope/ast-100.jpg',
+    alt: 'Mesas e Cadeiras',
+    title: 'Mesas e Cadeiras',
+  }, {
+    srcImage: './assets/images/Asterope/ast2-100.jpg',
+    alt: 'Mesas e Cadeiras',
+    title: 'Mesas e Cadeiras',
+  }, {
+    srcImage: './assets/images/Asterope/ast3-100.jpg',
+    alt: 'Mesas e Cadeiras',
+    title: 'Mesas e Cadeiras',
+  }, {
+    srcImage: './assets/images/Asterope/ast5-100.jpg',
+    alt: 'Mesas e Cadeiras',
+    title: 'Mesas e Cadeiras',
+  }, {
+    srcImage: './assets/images/Asterope/ast6-100.jpg',
+    alt: 'Mesas e Cadeiras',
+    title: 'Mesas e Cadeiras',
+  }, {
+    srcImage: './assets/images/Asterope/ast152-100.jpg',
+    alt: 'Mesas e Cadeiras',
+    title: 'Mesas e Cadeiras',
+  }],
+  srcPdfDownload: '/files/asterope.pdf'
+}, {
+  images: [{
     srcImage: './assets/images/Tomasi/tomasi1-100.jpg',
     alt: 'Estofado Star',
     title: 'Estofado Star',
@@ -131,23 +131,8 @@ const carrousels = [{
     title: 'Assento fixo e encosto com almofadas soltas',
   }, {
     srcImage: './assets/images/Tomasi/tomasi332-100.jpg',
-    alt: 'Assento retrátil, encosto reclinável com almofadas soltas',
-    title: 'Assento retrátil, encosto reclinável com almofadas soltas',
-  }],
-  srcPdfDownload: '/files/tomasi.pdf'
-},{
-  images: [{
-    srcImage: './assets/images/Rivatti/Prancheta 30-100.jpg',
-    alt: 'Sala',
-    title: 'Sala',
-  }, {
-    srcImage: './assets/images/Rivatti/Prancheta 31-100.jpg',
-    alt: 'Cozinha',
-    title: 'Cozinha',
-  }, {
-    srcImage: './assets/images/Rivatti/Prancheta 56-100.jpg',
-    alt: 'Mesa finlândia e cadeira Mia',
-    title: 'Mesa finlândia e cadeira Mia',
+    alt: 'Estofados',
+    title: 'Estofados',
   }],
   srcPdfDownload: '/files/tomasi.pdf'
 }]

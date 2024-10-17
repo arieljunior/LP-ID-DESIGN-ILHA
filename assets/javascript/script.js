@@ -65,8 +65,8 @@ const carrousels = [{
     title: 'Cozinha Cava Invertido Noce e Areia',
   }, {
     srcImage: './assets/images/Imobal/img8.jpg',
-    alt: 'Cozinha Cava Invertido Noce',
-    title: 'Cozinha Cava Invertido Noce',
+    alt: 'Móveis Planejados',
+    title: 'Móveis Planejados',
   }, {
     srcImage: './assets/images/Imobal/img9.jpg',
     alt: 'Cozinha Cava Invertido Rose e Nogueira ',
@@ -123,8 +123,8 @@ const carrousels = [{
 }, {
   images: [{
     srcImage: './assets/images/Tomasi/tomasi1-100.jpg',
-    alt: 'Estofado Star',
-    title: 'Estofado Star',
+    alt: 'Estofados',
+    title: 'Estofados',
   }, {
     srcImage: './assets/images/Tomasi/tomasi4-100.jpg',
     alt: 'Assento fixo e encosto com almofadas soltas',

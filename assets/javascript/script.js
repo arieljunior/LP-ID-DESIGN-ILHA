@@ -24,14 +24,18 @@ btnsWhatsapp.forEach(btnWpp => {
   })
 })
 
-function downloadPDF() {
-  const path = "/files/imobal.pdf";
+async function downloadPDF(url, nameDownload) {
+  // const response = await fetch(url);
+  // const blob = await response.blob();
+  // const downloadUrl = URL.createObjectURL(blob);
   const link = document.createElement("a");
-  link.href = window.origin + path;
-  link.download = "imobal-catalogo.pdf";
+  link.href = url;
+  link.download = nameDownload;
+  link.target = "_blank"
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+  // URL.revokeObjectURL(downloadUrl);
 }
 
 const carrousels = [{
@@ -92,7 +96,8 @@ const carrousels = [{
     alt: 'Lavandria Azul',
     title: 'Lavandria Azul',
   }],
-  srcPdfDownload: '/files/imobal.pdf'
+  srcPdfDownload: 'https://iddesignilha.s3.sa-east-1.amazonaws.com/imobal.pdf',
+  nameDownload: 'imobal.pdf'
 },{
   images: [{
     srcImage: './assets/images/Asterope/ast-100.jpg',
@@ -119,7 +124,8 @@ const carrousels = [{
     alt: 'Mesas e Cadeiras',
     title: 'Mesas e Cadeiras',
   }],
-  srcPdfDownload: '/files/asterope.pdf'
+  srcPdfDownload: 'https://iddesignilha.s3.sa-east-1.amazonaws.com/asterope.pdf',
+  nameDownload: 'asterope.pdf'
 }, {
   images: [{
     srcImage: './assets/images/Tomasi/tomasi1-100.jpg',
@@ -134,7 +140,8 @@ const carrousels = [{
     alt: 'Estofados',
     title: 'Estofados',
   }],
-  srcPdfDownload: '/files/tomasi.pdf'
+  srcPdfDownload: 'https://iddesignilha.s3.sa-east-1.amazonaws.com/tomasi.pdf',
+  nameDownload: 'tomasi.pdf'
 }]
 
 function populateProducts(productsData, carouselListItensElement, caroulseIndicatorsElement, idCarousel) {
@@ -162,7 +169,7 @@ function populateProducts(productsData, carouselListItensElement, caroulseIndica
 
     carouselCaption.innerHTML = `
        <h5>${product.title}</h5>
-       <button type="button" class="btn-download-catalog btn btn-outline-light" onclick="downloadPDF('${productsData.srcPdfDownload}');">
+       <button type="button" class="btn-download-catalog btn btn-outline-light" onclick="downloadPDF('${productsData.srcPdfDownload}', '${productsData.nameDownload}');">
        Baixar catalogo</button>
     `
 
